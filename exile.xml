@@ -2,7 +2,7 @@
 <elements>
 	<info>
 		<update version="1.0">
-			<file name="exile.xml" url="C:\Users\jsirl\OneDrive\Documents\5e Character Builder\custom\user\exile.xml" />
+			<file name="exile.xml" url="https://raw.githubusercontent.com/SteakandJam/AuroraCustoms/main/exile.xml" />
 		</update>
 	</info>	
 	<element name="Exile" type="Background" source="Kai Linder" id="ID_DMSG_PAR_BACKGROUND_EXILE">
@@ -49,7 +49,7 @@
 				<item id="5">Heretic</item>
 				<item id="6">Oddball</item>
 			</select>		
-			<select type="List" name="Personality Trait" number="2">
+			<select type="List" name="Personality Trait" number="1">
 				<item id="1">I frequently talk to other travelers, seeking news about my former home.</item>
 				<item id="2">I avoid the topic of my former home as much as possible.</item>
 				<item id="3">I am slow to trust others and keep to myself.</item>
