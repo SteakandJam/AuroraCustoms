@@ -32,7 +32,7 @@
 			<p>Some exiles take time to adjust to their new life, clinging to the past, while others adapt quickly and try to sever any ties to home. They may be slow to trust or eager to make allies and find a new home. Some seek only to return.</p>
 		</description>
 		<setters>
-			<set name="short">Religion, Survival, Tool, Abyssal</set>
+			<set name="short">Insight, Survival, Navigator's tools, Artisan's tools</set>
 		</setters>
 		<rules>
 			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
