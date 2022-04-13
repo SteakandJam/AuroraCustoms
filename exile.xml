@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="1.0">
+			<file name="exile.xml" url="C:\Users\jsirl\OneDrive\Documents\5e Character Builder\custom\user\exile.xml" />
+		</update>
+	</info>	
+	<element name="Exile" type="Background" source="Kai Linder" id="ID_DMSG_PAR_BACKGROUND_EXILE">
+		<description>
+			<p>You have been singled out as unwelcome in the group or society you were raised in, and have become isolated. Perhaps this was your own choice, your critical mind leading you to reject the rules of your society and leave as a conscientious objector, or you simply never fit in and chose to seek someplace you might belong better. Alternatively, you may have been forcibly ejected for your (mis)deeds or ideas, having done something inexcusable or speaking out contrary to those who rule. Regardless of how it occurred, you are no longer a part of your home culture, and have had to survive on your own.”</p>
+			<p class="indent"></p>
+			<ul class="unstyled">
+				<li><strong>Skill Proficiencies:</strong> Insight, Survival</li>
+				<li><strong>Tool Proficiencies:</strong> Navigator's tools, one type of artisan's tools</li>
+				<li><strong>Equipment:</strong> A memento from your former life (family crest, official order of rejection, a keepsake), a walking stick (quarterstaff), a compass, a winter blanket, a set of traveler's clothes, and a small pouch containing 5 gp.</li>
+			</ul>
+			<h5>EXILE TYPE</h5>
+			<p>There are many different kinds of exiles, implying different reasons for being cast out. You can roll on the following table to determine your exile type, or choose one that best fits your character.</p>
+			<table>
+				<thead>
+					<tr><td>d6</td><td>Exile Type</td></tr>
+				</thead>
+				<tr><td>1</td><td>Lawbreaker</td></tr>
+				<tr><td>2</td><td>Dissident</td></tr>
+				<tr><td>3</td><td>Deviant</td></tr>
+				<tr><td>4</td><td>Refugee</td></tr>
+				<tr><td>5</td><td>Heretic</td></tr>
+				<tr><td>6</td><td>Oddball</td></tr>
+			</table>
+			<div element="ID_DMSG_PAR_BACKGROUND_FEATURE_EXILE_OUTSIDERS_PERSPECTIVE" />
+			<h5>SUGGESTED CHARACTERISTICS</h5>
+			<p>Some exiles take time to adjust to their new life, clinging to the past, while others adapt quickly and try to sever any ties to home. They may be slow to trust or eager to make allies and find a new home. Some seek only to return.</p>
+		</description>
+		<setters>
+			<set name="short">Religion, Survival, Tool, Abyssal</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_NAVIGATORS_TOOLS" />
+			<select type="Proficiency" name="Tool Proficiency (Exile)" supports="Artisan tools" />
+			<grant type="Background Feature" id="ID_DMSG_PAR_BACKGROUND_FEATURE_EXILE_OUTSIDERS_PERSPECTIVE" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+			<select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+			<select type="List" name="Exile Type" optional="true">
+				<item id="1">Lawbreaker</item>
+				<item id="2">Dissident</item>
+				<item id="3">Deviant</item>
+				<item id="4">Refugee</item>
+				<item id="5">Heretic</item>
+				<item id="6">Oddball</item>
+			</select>		
+			<select type="List" name="Personality Trait" number="2">
+				<item id="1">I frequently talk to other travelers, seeking news about my former home.</item>
+				<item id="2">I avoid the topic of my former home as much as possible.</item>
+				<item id="3">I am slow to trust others and keep to myself.</item>
+				<item id="4">I position myself with my back to a solid surface.</item>
+				<item id="5">I'm extremely loyal to the friends I make.</item>
+				<item id="6">Everything I say sounds sarcastic or cynical.</item>
+				<item id="7">I still follow the culture and practices of my former home.</item>
+				<item id="8">I feel a need to prove myself, to show I can help and should be kept around.</item>
+			</select>
+			<select type="List" name="Ideal">
+				<item id="1">Revenge. No one who has done me wrong me will go unpunished. (Evil)</item>
+				<item id="2">Belonging. Everyone has a place in the world, I just have to find mine. (Neutral)</item>
+				<item id="3">Independence. Bad rules and traditions must be done away with. (Chaotic)</item>
+				<item id="4">Tradition. However I feel about it, the law is the law and to break it is wrong. (Lawful)</item>
+				<item id="5">Redemption. I will make the best of my circumstances to help others. (Good)</item>
+				<item id="6">Destiny. Nothing will distract me from my higher calling. (Any)</item>
+			</select>
+			<select type="List" name="Bond">
+				<item id="1">My family, clan, or heritage is the most important thing to me, despite the distance.</item>
+				<item id="2">Someday I will return home to right past wrongs.</item>
+				<item id="3">Those responsible for my situtation must pay!</item>
+				<item id="4">People from my home desperately seek my return.</item>
+				<item id="5">The past is behind me, I must work towards a better future for myself.</item>
+				<item id="6">I am still being hunted, and will not be free until my pursuers are dealt with.</item>
+			</select>
+			<select type="List" name="Flaw">
+				<item id="1">I am suspicious of others and expect the worst.</item>
+				<item id="2">I have trouble holding my tongue, I must speak out.</item>
+				<item id="3">I cannot let go of the past, and react poorly to reminders.</item>
+				<item id="4">I am hiding something very important and dangerous (family secret, stolen treasure).</item>
+				<item id="5">I have taken to substance abuse to cope with my situtation.</item>
+				<item id="6">I am fearful of abandonment and hate to be alone.</item>
+			</select>
+		</rules>
+	</element>
+	<element name="Feature: Outsider's Perspective" type="Background Feature" source="Kai Linder" id="ID_DMSG_PAR_BACKGROUND_FEATURE_EXILE_OUTSIDERS_PERSPECTIVE">
+		<description>
+			<p>You've learned to see society in a different way than most and can more critically evaluate it. As you spend time in a city, town, or tribe, the social dynamics of the system quickly become evident to you. By interacting with locals and spending time in the area you are able to determine things like the current balance of power, pressing issues and news, if there is unhappiness with the current status quo, and who important figures might be. However as an outsider, your criticism or interference are less welcome without good reason.</p>
+		</description>
+		<sheet alt="Outsider's Perspective" />
+	</element>
+</elements>
